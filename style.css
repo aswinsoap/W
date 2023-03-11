@@ -1,0 +1,40 @@
+body {
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-family: "Source Code Pro", monospace;
+    font-size: 16px;
+  }
+  
+  input {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    font-family: "Source Code Pro", monospace;
+    font-size: 16px;
+    caret-color: transparent;
+  }
+  
+  #prompt {
+    display: inline-block;
+    padding-right: 5px;
+  }
+  
+  input::before {
+    content: "_";
+    color: rgb(255, 255, 255);
+    animation: blink 1s infinite;
+    position: absolute;
+    margin-left: -8px; /* adjust to align with the text */
+  }
+  
+  input:focus::before {
+    color: #00ff00; /* change color when focused */
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
